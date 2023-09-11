@@ -4,12 +4,6 @@ pipeline {
     agent any
 
     stages {
-        stage("Chechout Branch") {
-            steps {
-                git branch:'main', url:'https://github.com/makasim98/course3-jenkins-gs-spring-petclinic'
-            }
-        }
-
         stage("Build") {
             steps {
                 sh "./mvnw package"
